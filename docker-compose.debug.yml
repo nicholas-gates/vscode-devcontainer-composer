@@ -6,3 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - .:/workspace # mount this folder to the container
+      - ~:/home/vscode # mount home directory
